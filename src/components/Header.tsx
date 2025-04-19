@@ -7,7 +7,7 @@ export default function Header() {
   const[open,isOpen]= useState(false)
   useEffect(()=>{
     const Isclique = (e:any)=>{
-      let menu = document.getElementById('menu')
+      const menu = document.getElementById('menu')
 
       if(menu && !menu.contains(e.target)){
         isOpen(false)
