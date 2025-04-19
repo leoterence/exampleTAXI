@@ -6,10 +6,10 @@ import { useEffect } from "react"
 export default function Header() {
   const[open,isOpen]= useState(false)
   useEffect(()=>{
-    const Isclique = (e:any)=>{
+    const Isclique = (e:MouseEvent)=>{
       const menu = document.getElementById('menu')
 
-      if(menu && !menu.contains(e.target)){
+      if(menu && !menu.contains(e.target as Node)){
         isOpen(false)
       }
     }
